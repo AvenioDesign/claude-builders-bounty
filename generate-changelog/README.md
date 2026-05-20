@@ -42,3 +42,10 @@ The matcher prefers Conventional Commit prefixes, then falls back to practical k
 ## Sample Output
 
 See [sample-output.md](sample-output.md) for a generated example.
+
+## Testing
+
+```bash
+python -m unittest generate-changelog/test_generate_changelog.py
+python -m py_compile generate-changelog/generate_changelog.py
+```
