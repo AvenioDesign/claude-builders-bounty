@@ -61,6 +61,25 @@ Recommended scripts:
 }
 ```
 
+## Greenfield Smoke Test
+
+After pasting this file into a new project, Claude Code should be able to answer
+these setup requests without asking for extra architecture decisions:
+
+```text
+Create the initial app folder structure for this SaaS.
+Add a projects feature with a create form, server action, validator, and SQLite schema.
+Add the smallest meaningful verification commands to package.json.
+```
+
+Expected behavior:
+
+- It chooses App Router server components by default.
+- It places writes in feature-level server actions.
+- It uses Drizzle migrations instead of ad hoc SQL changes.
+- It keeps database access out of UI components.
+- It reports missing scripts or environment variables instead of inventing them.
+
 ## Folder Structure
 
 Use this structure for new work:
